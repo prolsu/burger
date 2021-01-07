@@ -35,10 +35,9 @@ const orm = {
         });
     },
     insertOne: function (table, cols, vals, cb) {
-        let queryString = `INSERT INTO ${table}`;
-        let cols = cols.toString();
+        let columns = cols.toString();
 
-        queryString += ` (${cols}) VALUES (${printQuestionMarks(vals.length)})`; 
+        let queryString = `INSERT INTO ${table} (${columns}) VALUES (${printQuestionMarks(vals.length)})`; 
 
         console.log(queryString);
 
@@ -49,9 +48,7 @@ const orm = {
         });
     },
     updateOne: function (table, objColVals, condition, cb) {
-        const queryString = `UPDATE ${table}`;
-
-        queryString += `SET ${objectToSql(objColVals)} WHERE ${condition}`;
+        const queryString = `UPDATE ${table} SET ${objectToSql(objColVals)} WHERE ${condition}`;
 
         console.log(queryString);
         connection.query(queryString, function(err, result) {
