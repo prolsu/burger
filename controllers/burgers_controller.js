@@ -5,11 +5,11 @@ const router = express.Router();
 router.get('/', function(req, res) {
     burger.selectAll(function(data) {
         let hbsObject = {
-            burger_name: data
+            burgers: data
         };
         console.log(hbsObject);
-        // res.render('index', hbsObject);
-        res.send(true);//for testing only.. uncomment above line later
+        res.render('index', hbsObject);
+        // res.send(true);//for testing only.. uncomment above line later
     });
 });
 
@@ -35,4 +35,15 @@ router.put('/api/burgers/:id', function(req, res) {
     });
 });
 
+router.delete('/api/burgers/:id', function(req, res) {
+    const condition = `id=${req.params.id}`;
+
+    burger.deleteOne(condition, function(result) {
+        if(result.affectedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    })
+})
 module.exports = router;
