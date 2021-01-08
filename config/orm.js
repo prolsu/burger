@@ -37,7 +37,7 @@ const orm = {
     insertOne: function (table, cols, vals, cb) {
         let columns = cols.toString();
 
-        let queryString = `INSERT INTO ${table} (${columns}) VALUES (${printQuestionMarks(vals.length)})`; 
+        let queryString = `INSERT INTO ${table} (${columns}) VALUES (${printQuestionMarks(vals.length)});`; 
 
         console.log(queryString);
 

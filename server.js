@@ -22,4 +22,3 @@ app.use(routes);
 app.listen(PORT, function() {
     console.log(`Server is listening on: http://localhost:${PORT}`)
 });
-

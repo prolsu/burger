@@ -14,10 +14,16 @@ router.get('/', function(req, res) {
 });
 
 router.post('/api/burgers', function(req, res) {
-    burger.insertOne(['burger_name', 'devoured'],[req.body.burger_name, req.body.devoured],
-    function(result) {
-        res.json({ id: result.insertId });
-    });
+    const burgerName = req.body.burger_name;
+
+    if (burgerName.length < 21 && burgerName.length != 0) {
+        burger.insertOne(['burger_name', 'devoured'], [burgerName, req.body.devoured],
+            function (result) {
+                res.json({ id: result.insertId });
+            });
+    } else {
+        console.log(`Burger name exeeds character or box is empty`)
+    }
 });
 
 router.put('/api/burgers/:id', function(req, res) {
@@ -44,6 +50,7 @@ router.delete('/api/burgers/:id', function(req, res) {
         } else {
             res.status(200).end();
         }
-    })
-})
+    });
+});
+
 module.exports = router;
