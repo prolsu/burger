@@ -1,17 +1,18 @@
 $(function () {
+
     $('.change-devoured').on('click', function (event) {
         const id = $(this).data('id');
         console.log("this id:", id);
 
         let newDevoured = $(this).data('newdevoured');
 
-        console.log("before state:", newDevoured)
+        console.log(`prior state: ${newDevoured}`)
         if (newDevoured == 1) {
             newDevoured = false
         } else if (newDevoured == 0) {
             newDevoured = true
         }
-        console.log("after state:", newDevoured)
+        console.log(`post state: ${newDevoured}`)
 
         const devourState = {
             devoured: newDevoured
@@ -50,5 +51,6 @@ $(function () {
         }).then(function() {
             location.reload();
         })
-    })
+    });
+
 });

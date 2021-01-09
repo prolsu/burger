@@ -1,4 +1,62 @@
 body,
 html {
-    background-color: pink;
+    background-color:white;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.container {
+    margin-top: 25px;
+}
+.title {
+    text-align: center;
+    color: tomato;
+    font-size: 60px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    color: teal;
+    font-weight: bold;
+}
+
+.burgerPic {
+    opacity: .75;
+    max-width: 600px;
+}
+
+.create-form {
+    text-align: center;
+}
+
+#burger {
+    width: 225px;
+}
+
+.footer {
+    color: tomato;
+    font-weight: 900;
+    text-align: center;
+}
+
+li {
+    color: brown;
+    font-weight: 700;
+    text-align: center;
+    line-height: 35px;
+}
+
+.change-devoured,
+.delete-burger,
+.submit {
+    color: chocolate;
+    font-weight: 500;
+}
+
+.dynamicBtn {
+    float: right;
+}
+
+.status {
+    margin: 15px;
 }

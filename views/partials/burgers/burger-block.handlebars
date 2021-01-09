@@ -1,5 +1,7 @@
 <li>
     {{burger_name}}
+
+    <span class="dynamicBtn">
         {{#unless devoured}}
             <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
                 Devour It! 
@@ -11,5 +13,5 @@
                 Delete 
             </button>
         {{/if}}
+    </span>
 </li>
-<br>
