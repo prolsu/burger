@@ -6,7 +6,7 @@
   This application works with a database to store and send data to the front end employing handlebars.
   Please follow this link of my [portfolio](https://prolsu.github.io/portfolio/portfolio.html) to see this and other projects.
 
-  ### Website View
+  ### Desktop View
   ![heroku app on a website](/public/assets/img/website-desktop.PNG)
 
   ### Mobile View
