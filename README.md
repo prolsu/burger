@@ -7,10 +7,10 @@
   Please follow this link of my [portfolio](https://prolsu.github.io/portfolio/portfolio.html) to see this and other projects.
 
   ### Website View
-  ![heroku app on a website](public\assets\img\website-desktop.PNG)
+  ![heroku app on a website](/public/assets/img/website-desktop.PNG)
 
   ### Mobile View
-  ![heroku app on a mobile](public\assets\img\website-mobile.PNG)
+  ![heroku app on a mobile](/public/assets/img/website-mobile.PNG)
   
 
   ## Table of contents
